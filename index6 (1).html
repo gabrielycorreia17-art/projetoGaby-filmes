@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filmes e Séries</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #d795ffe9;
+            color: #0e0d0e;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: rgb(197, 45, 243);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        /* MENU */
+
+        nav {
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #742c88;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        /* INÍCIO */
+
+        .inicio {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .inicio img {
+            width: 45%;
+            border-radius: 15px;
+        }
+
+        .inicio-texto {
+            width: 77%;
+        }
+
+        .inicio-texto h2 {
+            text-align: left;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgb(222, 177, 250);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #167d9a;
+            margin-bottom: 10px;
+        }
+
+        /* ATIVIDADES */
+
+        .atividade {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #00a8cc;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .atividade h3 {
+            color: #167d9a;
+            margin-bottom: 10px;
+        }
+
+        /* PROJETO */
+
+        .projeto {
+            background: linear-gradient(135deg, #16222a, #3a6073);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .projeto h2 {
+            color: white;
+        }
+        Por isso, precisamos aprender a utilizar as
+                tecnologias de maneira <strong>responsável,
+                segura, criativa e consciente.</strong>
+        .botao {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #00a8cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: #750099;
+        }
+
+        /* REFLEXÃO */
+
+        .reflexao {
+            background-color: #e7f8fc;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .reflexao p {
+            font-size: 19px;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            .inicio {
+                flex-direction: column;
+            }
+
+            .inicio img,
+            .inicio-texto {
+                width: 100%;
+            }
+
+            .inicio-texto h2 {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>Filmes e Séries</h1>
+
+       
+        <p>
+          
+        </p>
+
+    </header>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+
+        <a href="#tecnologias">Tecnologias</a>
+
+        <a href="#inovacao">Inovação</a>
+
+        <a href="#atividades">Atividades</a>
+        Por isso, precisamos aprender a utilizar as
+        tecnologias de maneira <strong>responsável,
+        segura, criativa e consciente.</strong>
+        <a href="#projeto">Projeto</a>
+
+    </nav>
+
+
+    <!-- INÍCIO -->
+
+    <section id="inicio">
+
+        <div class="inicio">
+
+            <img
+                src="images (2).jpeg"
+                alt="Tecnologia e inovação"
+            >
+
+            <div class="inicio-texto">
+
+                <h2> Bem-vindos!</h2>
+
+                <p>
+                 
+
+                <br>
+
+                <p>
+                    Seu próximo filme ou série começa aqui 🍿
+
+Encontre filmes e séries para todos os momentos em um só lugar. Explore lançamentos, clássicos, sucessos do momento e produções de diferentes gêneros, descubra novos títulos e acompanhe suas histórias favoritas.
+
+🔎 Explore por gênero, ano ou categoria.
+🎬 Descubra novos filmes e séries que combinam com você.
+⭐ Confira informações, avaliações e detalhes de cada título.
+❤️ Monte sua lista de favoritos e tenha tudo organizado.
+
+Prepare a pipoca, escolha o que assistir e aproveite sua próxima sessão!
+                </p>
+
+                <br>
+
+                <p>
+                   
+                </p>
+
+                <br>
+
+                <p>
+                 
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Mais populares -->
+
+    <section id="Mais populares">
+
+        <h2>Mais populares</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <img
+                    src="download (1).jpeg"
+                    alt="Inteligência Artificial"
+                >
+
+                <h3>Resident Evil</h3>
+
+                <p>
+                    Em Resident Evil, Alice acorda sem memória em uma mansão e descobre que um laboratório secreto da empresa Umbrella liberou um vírus mortal. Ao lado de uma equipe de segurança, ela precisa enfrentar zumbis e outras criaturas enquanto tenta descobrir a verdade por trás do desastre.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="download.jpeg"
+                    alt="Robótica"
+                >
+
+                <h3>Homem-Aranha Um novo dia</h3>
+
+                <p>
+                    Após os acontecimentos que mudaram sua vida, Peter Parker precisa seguir em frente enquanto enfrenta novos desafios como Homem-Aranha. Entre ameaças perigosas, escolhas difíceis e a responsabilidade de proteger Nova York, ele embarca em uma nova aventura que pode mudar seu destino.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="images.jpeg"
+                    alt="Internet das Coisas"
+                >
+
+                <h3>Sandman</h3>
+
+                <p>
+                    Flint Marko é um criminoso que, após um acidente envolvendo uma experiência científica, ganha a capacidade de transformar seu corpo em areia e controlar sua forma. Conhecido como Sandman, ele se torna um dos inimigos mais perigosos do Homem-Aranha, usando seus poderes para enfrentar o herói enquanto tenta lidar com seu passado e suas escolhas.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="images (1).jpeg"
+                    alt="Realidade Virtual"
+                >
+
+                <h3>Cidade Invisivel</h3>
+
+                <p>
+                    Em Cidade Invisível, um policial começa a investigar um misterioso acontecimento e acaba descobrindo que criaturas do folclore brasileiro vivem secretamente entre os humanos. Enquanto busca respostas, ele se envolve em uma trama cheia de mistérios, lendas, conflitos sobrenaturais e segredos do passado.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INOVAÇÃO -->
+
+    <section id="inovacao">
+
+        <h2>Outro populares</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>🎬 Interestelar </h3>
+
+                <p>
+                    Um grupo de astronautas parte em uma missão pelo espaço em busca de um novo lar para a humanidade.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🕷️ Homem-Aranha: Sem Volta Para Casa</h3>
+
+                <p>
+                    Peter Parker enfrenta as consequências de ter sua identidade revelada e acaba diante de ameaças de outros universos.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> 
+                   </strong>🦇 Batman: O Cavaleiro das Trevas</h3>
+
+                <p>
+                    Batman enfrenta um criminoso imprevisível que coloca Gotham em caos.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>👻 Invocação do Mal </h3>
+
+                <p>
+                    Investigadores paranormais ajudam uma família que enfrenta acontecimentos assustadores em sua nova casa.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECNOLOGIA E SOCIEDADE -->
+
+    <section>
+
+        <div class="reflexao">
+
+            <h2>Onde assistir</h2>
+
+            <p>
+                Se você quer apps para assistir filmes, algumas opções populares são:
+            </p>
+
+            <br>
+
+            <p>
+                Netflix — filmes, séries e produções originais.
+
+                Amazon Prime Video — filmes, séries e aluguel/compra de títulos.
+                
+                Disney+ — Disney, Pixar, Marvel, Star Wars e outros.
+            </p>
+
+            <br>
+
+            <p>
+                Max — filmes e séries da HBO e Warner Bros.
+
+                Globoplay — conteúdo brasileiro, filmes, séries e TV.
+                
+                                                                          Pluto TV — opção gratuita, com filmes e canais.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATIVIDADES -->
+
+    <section id="atividades">
+
+        <h2>Classificações</h2>
+
+
+        <div class="atividade">
+
+            <h3>🎬 Por nota: </h3>
+
+            <p>
+                melhores avaliados → piores avaliados
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>⭐ Por gênero: </h3>
+
+            <p>
+                ação, terror, comédia, romance, ficção científica etc.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>🏆 Por qualidade:</h3>
+
+            <p>
+                roteiro, atuação, direção, fotografia
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>📅 Por década:</h3>
+
+            <p>
+                anos 80, 90, 2000, 2010, 2020...
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>🎭 Por franquia: </h3>
+
+            <p>
+                Marvel, Harry Potter, Senhor dos Anéis etc.
+
+
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>👨‍👩‍👧 Por faixa etária:</h3>
+
+            <p>
+                infantil, família, adolescente, adulto
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJETO FINAL -->
+
+    <section id="projeto">
+
+        <div class="projeto">
+
+            <h2>Avalie nosso site</h2>
+
+            <p>
+              
+                
+                Sua avaliação:
+                ☆ ☆ ☆ ☆ ☆
+            </p>
+
+            <br>
+
+            <p>
+              Comentarios
+            </p>
+
+            <br>
+
+            <p>
+                ⭐⭐ 10/10 — “Filme incrível! A história me prendeu do começo ao fim e o final foi excelente.”⭐⭐⭐
+                <br>
+                ⭐⭐⭐⭐ 8/10 — “Gostei bastante. Tem algumas partes mais lentas, mas no geral é um ótimo filme.”
+                <br>
+                ⭐⭐⭐ 6/10 — “Não é ruim, mas esperava um pouco mais. Algumas partes poderiam ter sido melhor desenvolvidas.”
+                <br>
+                ⭐⭐⭐⭐⭐ 9/10 — “Fiquei surpreso com a qualidade. A história evolui muito bem e o final fecha tudo de forma satisfatória.”
+
+
+                <br>
+                ⭐⭐⭐⭐ 8/10 — “Boa história, ótimos personagens e uma fotografia muito bonita.”
+
+
+                <br>
+                ⭐⭐ 5/10 — “Não consegui me conectar com os personagens. O filme tinha potencial, mas não funcionou para mim.”
+                <br>
+              
+            </p>
+
+            <a href="#inicio" class="botao">
+                Voltar ao início
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+          Filmes e Séries
+        </p>
+
+        <p>
+            Criar. Experimentar. Inovar. Transformar.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 - Projeto Educacional
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
